@@ -28,7 +28,8 @@ folder_colors={
 "res://AnimatronicMovement/": "green",
 "res://FightingGameCollisionBoxTest/": "green",
 "res://MainMenu/": "yellow",
-"res://NetworkTest/": "green"
+"res://NetworkTest/": "green",
+"res://ShaderTest/": "green"
 }
 
 [input]
