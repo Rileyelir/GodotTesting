@@ -21,3 +21,7 @@ func _on_fighting_game_collision_box_test_pressed():
 func _on_network_test_pressed():
 
 	get_tree().change_scene_to_file("res://NetworkTest/network_test.tscn")
+
+func _on_shader_test_pressed():
+	
+	get_tree().change_scene_to_file("res://ShaderTest/shader_test.tscn")

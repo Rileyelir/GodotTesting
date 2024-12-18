@@ -120,10 +120,10 @@ layout_mode = 2
 theme_override_fonts/font = SubResource("SystemFont_xxxto")
 text = "NetworkTest"
 
-[node name="Button4" type="Button" parent="Panel/ScrollContainer/VBoxContainer"]
+[node name="ShaderTest" type="Button" parent="Panel/ScrollContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = SubResource("SystemFont_xxxto")
-text = "N/A"
+text = "ShaderTest"
 
 [node name="Button5" type="Button" parent="Panel/ScrollContainer/VBoxContainer"]
 layout_mode = 2
@@ -259,3 +259,4 @@ text = "N/A"
 [connection signal="pressed" from="Panel/ScrollContainer/VBoxContainer/AnimationPlayerTest" to="." method="_on_animation_player_test_pressed"]
 [connection signal="pressed" from="Panel/ScrollContainer/VBoxContainer/FightingGameCollisionBoxTest" to="." method="_on_fighting_game_collision_box_test_pressed"]
 [connection signal="pressed" from="Panel/ScrollContainer/VBoxContainer/NetworkTest" to="." method="_on_network_test_pressed"]
+[connection signal="pressed" from="Panel/ScrollContainer/VBoxContainer/ShaderTest" to="." method="_on_shader_test_pressed"]

@@ -21,6 +21,10 @@ config/icon="res://testing.png"
 window/size/resizable=false
 window/stretch/mode="canvas_items"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/freecam_3D/plugin.cfg")
+
 [file_customization]
 
 folder_colors={
