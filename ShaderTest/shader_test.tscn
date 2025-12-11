@@ -1,18 +1,19 @@
-[gd_scene load_steps=18 format=3 uid="uid://dhjuu2125l8w3"]
+[gd_scene load_steps=23 format=3 uid="uid://dhjuu2125l8w3"]
 
-[ext_resource type="Shader" path="res://ShaderTest/planehill.gdshader" id="1_lqtrf"]
-[ext_resource type="Shader" path="res://ShaderTest/shader2.gdshader" id="2_xwc06"]
-[ext_resource type="Script" path="res://addons/freecam_3D/freecam.gd" id="3_6r3an"]
+[ext_resource type="Shader" uid="uid://dugqeeomyyjxx" path="res://ShaderTest/planehill.gdshader" id="1_lqtrf"]
+[ext_resource type="Shader" uid="uid://bjpclxltxmyjy" path="res://ShaderTest/shader2.gdshader" id="2_xwc06"]
+[ext_resource type="Script" uid="uid://cr6dpxjr0sgbv" path="res://addons/freecam_3D/freecam.gd" id="3_6r3an"]
+[ext_resource type="Shader" uid="uid://slph0qj37qtt" path="res://ShaderTest/vertexshake.gdshader" id="4_ieuwv"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_ckvrk"]
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_gxg7h"]
-seamless = true
 noise = SubResource("FastNoiseLite_ckvrk")
+seamless = true
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_54t1e"]
-seamless = true
 noise = SubResource("FastNoiseLite_ckvrk")
+seamless = true
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_52iq2"]
 render_priority = 0
@@ -33,15 +34,15 @@ noise = SubResource("FastNoiseLite_oam4f")
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_mt5kb"]
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_qdkbq"]
-as_normal_map = true
 noise = SubResource("FastNoiseLite_mt5kb")
+as_normal_map = true
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7s6k8"]
 render_priority = 0
 shader = ExtResource("2_xwc06")
-shader_parameter/height_scale = 0.735
 shader_parameter/noise = SubResource("NoiseTexture2D_0ebcx")
 shader_parameter/normal_map = SubResource("NoiseTexture2D_qdkbq")
+shader_parameter/height_scale = 0.735
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_3en0s"]
 lightmap_size_hint = Vector2i(52, 52)
@@ -58,6 +59,19 @@ sky_material = SubResource("ProceduralSkyMaterial_o6u4m")
 [sub_resource type="Environment" id="Environment_cqxne"]
 background_mode = 2
 sky = SubResource("Sky_ore54")
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_ieuwv"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_bhram"]
+noise = SubResource("FastNoiseLite_ieuwv")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bhram"]
+render_priority = 0
+shader = ExtResource("4_ieuwv")
+shader_parameter/noise_tex = SubResource("NoiseTexture2D_bhram")
+
+[sub_resource type="SphereMesh" id="SphereMesh_n4ftm"]
+material = SubResource("ShaderMaterial_bhram")
 
 [node name="ShaderTest" type="Node3D"]
 
@@ -78,3 +92,7 @@ environment = SubResource("Environment_cqxne")
 [node name="Freecam3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3383, 1.32029)
 script = ExtResource("3_6r3an")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3420899, -3.1703844)
+mesh = SubResource("SphereMesh_n4ftm")
