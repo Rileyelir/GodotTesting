@@ -23,7 +23,7 @@ window/stretch/mode="canvas_items"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/freecam_3D/plugin.cfg")
+enabled=PackedStringArray("res://addons/freecam_3D/plugin.cfg", "res://addons/func_godot/plugin.cfg")
 
 [file_customization]
 
@@ -33,7 +33,8 @@ folder_colors={
 "res://FightingGameCollisionBoxTest/": "green",
 "res://MainMenu/": "yellow",
 "res://NetworkTest/": "green",
-"res://ShaderTest/": "green"
+"res://ShaderTest/": "green",
+"res://TrenchbroomTest/": "green"
 }
 
 [input]

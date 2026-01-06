@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bhcuaauj347ll"]
 
-[ext_resource type="Script" path="res://MainMenu/main_menu.gd" id="1_ag7ox"]
+[ext_resource type="Script" uid="uid://dimop37uus8av" path="res://MainMenu/main_menu.gd" id="1_ag7ox"]
 
 [sub_resource type="SystemFont" id="SystemFont_2m53t"]
 font_names = PackedStringArray("Comic Sans MS")
@@ -128,7 +128,7 @@ text = "ShaderTest"
 [node name="Button5" type="Button" parent="Panel/ScrollContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = SubResource("SystemFont_xxxto")
-text = "N/A"
+text = "TrenchbroomTest (func_godot)"
 
 [node name="Button6" type="Button" parent="Panel/ScrollContainer/VBoxContainer"]
 layout_mode = 2
@@ -260,3 +260,4 @@ text = "N/A"
 [connection signal="pressed" from="Panel/ScrollContainer/VBoxContainer/FightingGameCollisionBoxTest" to="." method="_on_fighting_game_collision_box_test_pressed"]
 [connection signal="pressed" from="Panel/ScrollContainer/VBoxContainer/NetworkTest" to="." method="_on_network_test_pressed"]
 [connection signal="pressed" from="Panel/ScrollContainer/VBoxContainer/ShaderTest" to="." method="_on_shader_test_pressed"]
+[connection signal="pressed" from="Panel/ScrollContainer/VBoxContainer/Button5" to="." method="_on_trenchbroom_pressed"]
