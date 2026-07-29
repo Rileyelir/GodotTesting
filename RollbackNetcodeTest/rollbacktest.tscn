@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://brujpewhugphv"]
+
+[ext_resource type="Script" uid="uid://bjclwb0e6qjcf" path="res://RollbackNetcodeTest/rollbacktest.gd" id="1_mq2x3"]
+
+[sub_resource type="Gradient" id="Gradient_vvse4"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_etbjh"]
+gradient = SubResource("Gradient_vvse4")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mq2x3"]
+size = Vector2(1226, 52)
+
+[node name="RollbackTest" type="Node2D" unique_id=683159931 node_paths=PackedStringArray("p1spawn", "p2spawn")]
+script = ExtResource("1_mq2x3")
+p1spawn = NodePath("Player1Spawn")
+p2spawn = NodePath("Player2Spawn")
+
+[node name="Floor" type="StaticBody2D" parent="." unique_id=351153343]
+
+[node name="Sprite2D" type="Sprite2D" parent="Floor" unique_id=323878354]
+position = Vector2(575, 638)
+scale = Vector2(19.15625, 0.84375)
+texture = SubResource("GradientTexture2D_etbjh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" unique_id=2121216843]
+position = Vector2(575, 638)
+shape = SubResource("RectangleShape2D_mq2x3")
+
+[node name="Player1Spawn" type="Node2D" parent="." unique_id=2021942277]
+position = Vector2(471, 363)
+
+[node name="Player2Spawn" type="Node2D" parent="." unique_id=800247777]
+position = Vector2(684, 363)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1949884748]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer" unique_id=73310513]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="JoinGame" type="Button" parent="CanvasLayer/HBoxContainer" unique_id=511008109]
+layout_mode = 2
+text = "Join Game"
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/HBoxContainer" unique_id=1036667603]
+layout_mode = 2
+
+[node name="HostGame" type="Button" parent="CanvasLayer/HBoxContainer" unique_id=1441946866]
+layout_mode = 2
+text = "Host Game"
+
+[connection signal="button_down" from="CanvasLayer/HBoxContainer/JoinGame" to="." method="_on_join_game_button_down"]
+[connection signal="button_down" from="CanvasLayer/HBoxContainer/HostGame" to="." method="_on_host_game_button_down"]
