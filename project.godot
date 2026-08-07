@@ -17,13 +17,8 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 config/name="GodotTesting"
 config/tags=PackedStringArray("test")
 run/main_scene="res://MainMenu/main_menu.tscn"
-config/features=PackedStringArray("4.6", "Forward Plus")
+config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://testing.png"
-
-[autoload]
-
-SyncManager="*uid://xohxvtt4jjfo"
-SyncDebugger="*uid://dsi2fbr4puyhr"
 
 [display]
 
@@ -32,11 +27,12 @@ window/stretch/mode="canvas_items"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/delta_rollback/plugin.cfg", "res://addons/freecam_3D/plugin.cfg", "res://addons/func_godot/plugin.cfg")
+enabled=PackedStringArray("res://addons/freecam_3D/plugin.cfg", "res://addons/func_godot/plugin.cfg")
 
 [file_customization]
 
 folder_colors={
+"res://3DBeatEmUpCamera/": "green",
 "res://AnimationPlayerTest/": "green",
 "res://AnimatronicMovement/": "green",
 "res://FightingGameCollisionBoxTest/": "green",

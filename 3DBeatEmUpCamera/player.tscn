@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://4j2m8rwcirt0"]
+
+[ext_resource type="Script" uid="uid://fvporc8wfmxl" path="res://3DBeatEmUpCamera/player.gd" id="1_wgcaa"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_01wwf"]
+albedo_color = Color(0.011764706, 1, 1, 1)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_01wwf"]
+
+[node name="Player" type="CharacterBody3D" unique_id=1424305785]
+script = ExtResource("1_wgcaa")
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="." unique_id=1904591055]
+material = SubResource("StandardMaterial3D_01wwf")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1281571564]
+shape = SubResource("CylinderShape3D_01wwf")

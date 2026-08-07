@@ -21,6 +21,3 @@ func _on_shader_test_pressed():
 
 func _on_trenchbroom_pressed() -> void:
 	get_tree().change_scene_to_file("res://TrenchbroomTest/trenchbroom_test.tscn")
-
-func _on_rollback_netcode_button_down() -> void:
-	pass # Replace with function body.

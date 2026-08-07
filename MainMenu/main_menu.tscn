@@ -103,37 +103,37 @@ alignment = 1
 [node name="AnimatronicMovement" type="Button" parent="Panel/ScrollContainer/VBoxContainer" unique_id=583887886]
 layout_mode = 2
 theme_override_fonts/font = SubResource("SystemFont_xxxto")
-text = "AnimatronicMovementTest"
+text = "Animatronic Movement Test"
 
 [node name="AnimationPlayerTest" type="Button" parent="Panel/ScrollContainer/VBoxContainer" unique_id=1918400573]
 layout_mode = 2
 theme_override_fonts/font = SubResource("SystemFont_xxxto")
-text = "AnimationPlayerTest"
+text = "Animation Player Test"
 
 [node name="FightingGameCollisionBoxTest" type="Button" parent="Panel/ScrollContainer/VBoxContainer" unique_id=1376859547]
 layout_mode = 2
 theme_override_fonts/font = SubResource("SystemFont_xxxto")
-text = "FightingGameCollisionBoxTest"
+text = "Fighting Game Collision Box Test"
 
 [node name="NetworkTest" type="Button" parent="Panel/ScrollContainer/VBoxContainer" unique_id=427330713]
 layout_mode = 2
 theme_override_fonts/font = SubResource("SystemFont_xxxto")
-text = "NetworkTest"
+text = "Network Test"
 
 [node name="ShaderTest" type="Button" parent="Panel/ScrollContainer/VBoxContainer" unique_id=1442519447]
 layout_mode = 2
 theme_override_fonts/font = SubResource("SystemFont_xxxto")
-text = "ShaderTest"
+text = "Shader Test"
 
 [node name="Trenchbroom" type="Button" parent="Panel/ScrollContainer/VBoxContainer" unique_id=826010019]
 layout_mode = 2
 theme_override_fonts/font = SubResource("SystemFont_xxxto")
-text = "TrenchbroomTest (func_godot)"
+text = "Trenchbroom Test (func_godot)"
 
-[node name="RollbackNetcode" type="Button" parent="Panel/ScrollContainer/VBoxContainer" unique_id=48787373]
+[node name="Button6" type="Button" parent="Panel/ScrollContainer/VBoxContainer" unique_id=48787373]
 layout_mode = 2
 theme_override_fonts/font = SubResource("SystemFont_xxxto")
-text = "RollbackNetcodeTest"
+text = "N/A"
 
 [node name="Button7" type="Button" parent="Panel/ScrollContainer/VBoxContainer" unique_id=802807752]
 layout_mode = 2
@@ -261,4 +261,3 @@ text = "N/A"
 [connection signal="pressed" from="Panel/ScrollContainer/VBoxContainer/NetworkTest" to="." method="_on_network_test_pressed"]
 [connection signal="pressed" from="Panel/ScrollContainer/VBoxContainer/ShaderTest" to="." method="_on_shader_test_pressed"]
 [connection signal="pressed" from="Panel/ScrollContainer/VBoxContainer/Trenchbroom" to="." method="_on_trenchbroom_pressed"]
-[connection signal="button_down" from="Panel/ScrollContainer/VBoxContainer/RollbackNetcode" to="." method="_on_rollback_netcode_button_down"]
